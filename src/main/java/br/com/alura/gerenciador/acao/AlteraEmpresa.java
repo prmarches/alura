@@ -23,6 +23,8 @@ public class AlteraEmpresa {
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 
+		System.out.println("Alterando empresa" +id);
+
 		Date dataAbertura = null;
 		try {
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
