@@ -1,0 +1,20 @@
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'PASSWORD';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+mysql> FLUSH PRIVILEGES;
+
+
+Para efetuar login diretamente em um console mysql remoto, use o comando abaixo:
+
+mysql -u {username} -p'{password}' \
+    -h {remote server ip or name} -P {port} \
+    -D {DB name}
+Por exemplo
+
+mysql -u root -p'root' \
+        -h 127.0.0.1 -P 3306 \
+        -D local
+
+
+        jdbc:mysql://ip:3306/banco?autoReconnect=true
+
+        
